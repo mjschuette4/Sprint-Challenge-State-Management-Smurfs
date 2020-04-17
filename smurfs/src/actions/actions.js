@@ -6,6 +6,11 @@ export const LOADING_SUCCESS = "LOADING_SUCCESS";
 
 export const smurfLoad = () => dispatch => {
     dispatch({ type: GET_DATA });
+    axios
+    .get("http://localhost:3333/smurfs")
+		.then(res => {
+			dispatch({ type: LOADING_SUCCESS, payload: res.data });
+		})
 }
 
 export const smurfAdd = smurf => dispatch => {
