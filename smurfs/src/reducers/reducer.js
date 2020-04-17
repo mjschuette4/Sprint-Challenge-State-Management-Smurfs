@@ -1,4 +1,6 @@
 
+import { GET_DATA, LOADING_SUCCESS } from "../actions/actions";
+
 const initialState = {
     isLoading: false,
     smurfs:[]
