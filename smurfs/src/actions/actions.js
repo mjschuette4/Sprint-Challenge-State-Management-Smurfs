@@ -10,7 +10,7 @@ export const smurfLoad = () => dispatch => {
 
 export const smurfAdd = smurf => dispatch => {
     axios
-        .get("http://localhost:3333", smurf)
+        .post("http://localhost:3333/smurfs", smurf)
         .then(res => {
             dispatch({ type: LOADING_SUCCESS, payload: res.data });
         })
